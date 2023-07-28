@@ -1,14 +1,14 @@
 import React from 'react'
 import textBlurbs from '@/pages/api/textBlurbs'
 import {
-  MdOutlineAlternateEmail,
+  MdOutlineEmail,
   MdOutlinePhone,
   MdOutlineMarkunreadMailbox,
 
 } from 'react-icons/md'
 
 const styles = {
-  "contactStyles": "flex gap-2 items-center font-montserrat w-fit mx-auto"
+  "contactStyles": "flex gap-4 my-2 items-center font-montserrat w-fit "
 }
 
 function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, isContacts}) {
@@ -24,9 +24,9 @@ function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, i
     return (
       <main id='contacts' className={`${mainStyle}`}>
         <h1 className={`${sectionHeaderStyle}`}>{sectionHeader}</h1>
-        <p className={`${styles.contactStyles}`}><MdOutlineAlternateEmail />{textBlurbs['contacts'].email}</p>
+        <p className={`${styles.contactStyles}`}><MdOutlineEmail />{textBlurbs['contacts'].email}</p>
         <p className={`${styles.contactStyles}`}><MdOutlinePhone />{textBlurbs['contacts'].phone}</p>
-        <p className={`${styles.contactStyles}`}><MdOutlineMarkunreadMailbox/>{textBlurbs['contacts'].poBox}</p>
+        <div className={`${styles.contactStyles} `}><MdOutlineMarkunreadMailbox/><p>{textBlurbs['contacts'].poBox}</p></div>
       </main>
     )
   } else {

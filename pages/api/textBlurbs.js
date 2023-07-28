@@ -28,7 +28,7 @@ const textBlurbs = {
   "contacts": {
     "email": "joe@heyjoemagic.com",
     "phone": "614-777-7632",
-    "poBox": "P.O. Box 259Ashley, Ohio 43003"
+    "poBox": "P.O. Box 259 Ashley, Ohio 43003"
   }
 }
 
