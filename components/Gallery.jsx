@@ -3,7 +3,7 @@ import imageData from '@/pages/api/imageData'
 import Image from 'next/image'
 import useWindow from '@/hooks/useWindow'
 
-function Gallery({mainStyle, sectionHeaderStyle}) {
+function Gallery({mainStyle, sectionHeaderStyle, darkmode}) {
   return (
     <main id='gallery' className={`${mainStyle}`}>
       <h1 className={`${sectionHeaderStyle}`}>Gallery</h1>

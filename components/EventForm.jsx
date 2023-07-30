@@ -12,6 +12,7 @@ function EventForm({mainStyle, sectionHeaderStyle}) {
 const [name, setName] = useState('name')
 const [email, setEmail] = useState('email')
 const [phoneNum, setPhoneNum] = useState('phone')
+const [cityState, setCityState] = useState('N/A')
 const [eventDate, setEventDate] = useState('date')
 const [eventHour, setEventHour] = useState('1')
 
@@ -33,6 +34,7 @@ const handleSubmit = () => {
       'name': name,
       'email': email,
       'phoneNum': phoneNum,
+      'cityState': cityState,
       'eventDate': eventDate,
       'eventTime': `${eventHour}:${eventMinute}${eventPeriod}`,
       'eventNotes': eventNotes
@@ -52,6 +54,8 @@ const handleSubmit = () => {
         <input type='email' placeholder='email' onChange={(e) => {setEmail(e.target.value)}} className={styles.formInput} />
         <label className={styles.formLabel}>Phone Number</label>
         <input type="tel" placeholder='phone number' onChange={(e) => {setPhoneNum(e.target.value)}} className={styles.formInput} />
+        <label className={styles.formLabel}>City/State</label>
+        <input type="text" placeholder='city/state' onChange={(e) => {setName(e.target.value)}} className={styles.formInput} />
         <label className={styles.formLabel}>Date of Event</label>
         <input type="date" placeholder='Date of Event' onChange={(e) => {setEventDate(e.target.value)}} className={`${styles.formInput} mx-auto w-full`} />
 

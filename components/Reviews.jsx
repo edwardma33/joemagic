@@ -1,7 +1,7 @@
 import React from 'react'
 import textBlurbs from '@/pages/api/textBlurbs'
 
-function Reviews({mainStyle, sectionHeaderStyle, isSmall}) {
+function Reviews({mainStyle, sectionHeaderStyle, isSmall, darkMode}) {
 
   return (
     <main id='reviews' className={`${mainStyle}`}>

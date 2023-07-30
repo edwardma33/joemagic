@@ -11,7 +11,7 @@ const styles = {
   "contactStyles": "flex gap-4 my-2 items-center font-montserrat w-fit "
 }
 
-function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, isContacts}) {
+function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, isContacts, darkMode}) {
 
   if (sectionHeader && !isContacts) {
     return (
