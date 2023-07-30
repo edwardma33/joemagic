@@ -19,7 +19,7 @@ const isSmall = (pixels) => {
   }
 
 export default function Home({ darkMode, setDarkMode }) {
-  const mainStyle = ` w-[80%] p-8 my-8 mx-auto shadow-xl rounded-xl bg-white transition-colors duration-300 ${darkMode ? 'bg-slate-600 text-slate-200' : 'text-slate-600'} `
+  const mainStyle = ` w-[80%] p-8 my-8 mx-auto shadow-xl rounded-xl bg-white transition-colors duration-300 ${darkMode ? ' text-slate-200 bg-slate-600' : 'text-slate-600'} `
   const sectionHeaderStyle = 'font-montserratBold text-2xl text-center bg-green-300 w-fit mx-auto rounded-lg text-green-900 p-1 mb-4'
 
   return (
