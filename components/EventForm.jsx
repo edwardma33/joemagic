@@ -55,7 +55,7 @@ const handleSubmit = () => {
         <label className={styles.formLabel}>Phone Number</label>
         <input type="tel" placeholder='phone number' onChange={(e) => {setPhoneNum(e.target.value)}} className={styles.formInput} />
         <label className={styles.formLabel}>City/State</label>
-        <input type="text" placeholder='city/state' onChange={(e) => {setName(e.target.value)}} className={styles.formInput} />
+        <input type="text" placeholder='city/state' onChange={(e) => {setCityState(e.target.value)}} className={styles.formInput} />
         <label className={styles.formLabel}>Date of Event</label>
         <input type="date" placeholder='Date of Event' onChange={(e) => {setEventDate(e.target.value)}} className={`${styles.formInput} mx-auto w-full`} />
 
