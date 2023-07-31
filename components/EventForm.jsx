@@ -8,7 +8,7 @@ const styles = {
   'formSubmit': ' text-xl font-montserratBold bg-blue-300 w-fit rounded-lg text-blue-900 p-1 mx-auto'
 }
 
-function EventForm({mainStyle, sectionHeaderStyle}) {
+function EventForm({ mainStyle, sectionHeaderStyle}) {
 const [name, setName] = useState('name')
 const [email, setEmail] = useState('email')
 const [phoneNum, setPhoneNum] = useState('phone')
