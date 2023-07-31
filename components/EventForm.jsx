@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 
 
 const styles = {
@@ -23,6 +23,12 @@ const minute = ["00", "15", "30", "45"]
 const period = ["PM", "AM"]
 
 const [eventNotes, setEventNotes] = useState("N/A")
+
+useEffect(() => {
+  fetch('http://edwardma.pythonanywhere.com/', {
+    method: 'GET'
+  }).then(console.log('anal'))
+}, [])
 
 const handleSubmit = () => {
   fetch('http://edwardma.pythonanywhere.com/send_email', {
