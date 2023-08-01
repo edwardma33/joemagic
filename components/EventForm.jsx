@@ -24,6 +24,12 @@ const period = ["PM", "AM"]
 
 const [eventNotes, setEventNotes] = useState("N/A")
 
+useEffect(() => {
+  fetch('https://email-api-inky.vercel.app/', {
+    method: 'GET'
+  })
+})
+
 const handleSubmit = () => {
   fetch('https://email-api-inky.vercel.app/send_email', {
     method: 'POST',
