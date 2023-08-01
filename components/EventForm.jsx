@@ -24,14 +24,8 @@ const period = ["PM", "AM"]
 
 const [eventNotes, setEventNotes] = useState("N/A")
 
-useEffect(() => {
-  fetch('http://edwardma.pythonanywhere.com/', {
-    method: 'GET'
-  }).then(console.log('anal'))
-}, [])
-
 const handleSubmit = () => {
-  fetch('http://edwardma.pythonanywhere.com/send_email', {
+  fetch('https://email-api-inky.vercel.app/send_email', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
