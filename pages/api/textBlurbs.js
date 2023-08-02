@@ -26,7 +26,7 @@ const textBlurbs = {
     "Audience participation, family friendly comedy, music, magic, a story or two from grand dad's dairy farm, PLUS the astounding appearance of old time milk bottles (full of milk) from thin air!",
   ],
   "contacts": {
-    "email": "joe@heyjoemagic.com",
+    "email": "joelyonsmagic@gmail.com",
     "phone": "614-777-7632",
     "poBox": "P.O. Box 259 Ashley, Ohio 43003"
   }
