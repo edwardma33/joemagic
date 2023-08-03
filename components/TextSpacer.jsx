@@ -24,8 +24,8 @@ function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, i
     return (
       <main id='contacts' className={`${mainStyle}`}>
         <h1 className={`${sectionHeaderStyle}`}>{sectionHeader}</h1>
-        <p className={`${styles.contactStyles}`}><MdOutlineEmail />{textBlurbs['contacts'].email}</p>
-        <p className={`${styles.contactStyles}`}><MdOutlinePhone />{textBlurbs['contacts'].phone}</p>
+        <a href={`mailto:${textBlurbs['contacts'].email}`} className={`${styles.contactStyles}`}><MdOutlineEmail />{textBlurbs['contacts'].email}</a>
+        <a href={`tel:${textBlurbs['contacts'].phone}`} className={`${styles.contactStyles}`}><MdOutlinePhone />{textBlurbs['contacts'].phone}</a>
         <div className={`${styles.contactStyles} `}><MdOutlineMarkunreadMailbox/><p>{textBlurbs['contacts'].poBox}</p></div>
       </main>
     )

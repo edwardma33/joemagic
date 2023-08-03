@@ -4,7 +4,7 @@ import { React, useState, useEffect } from 'react'
 const styles = {
   'formLabel': 'font-montserratBold bg-blue-300 w-fit rounded-lg text-blue-900 p-1',
   'formInput': 'p-2 border-2 rounded-xl border-slate-200 font-montserrat placeholder:font-montserrat',
-  'formSelect': 'p-2 rounded-xl border-none hover:bg-slate-100 text-center font-montserrat',
+  'formSelect': 'p-2 rounded-xl border-none hover:bg-slate-100 text-center font-montserra dark:hover:bg-slate-700 outline-none',
   'formSubmit': ' text-xl font-montserratBold bg-blue-300 w-fit rounded-lg text-blue-900 p-1 mx-auto'
 }
 
@@ -22,6 +22,8 @@ const hour = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 const minute = ["00", "15", "30", "45"]
 const period = ["PM", "AM"]
 
+const [eventBudget, setEventBudget] = useState('N/A')
+const budgetOptions = ['Under $500', '$500-$1,500', '$1,500-$3,000', '$3,000-$5,000', 'Above 5,000']
 const [eventNotes, setEventNotes] = useState("N/A")
 
 useEffect(() => {
@@ -43,6 +45,7 @@ const handleSubmit = () => {
       'cityState': cityState,
       'eventDate': eventDate,
       'eventTime': `${eventHour}:${eventMinute}${eventPeriod}`,
+      'eventBudget': eventBudget,
       'eventNotes': eventNotes
     })
   }).then(() => {
@@ -65,7 +68,7 @@ const handleSubmit = () => {
         <label className={styles.formLabel}>Date of Event</label>
         <input type="date" placeholder='Date of Event' onChange={(e) => {setEventDate(e.target.value)}} className={`${styles.formInput} mx-auto w-full`} />
 
-        <label className={styles.formLabel}>Time </label>
+        <label className={styles.formLabel}>Time</label>
         <div className=' text-center w-full border-2 border-slate-200 rounded-xl px-10'>
           <select onChange={(e) => {setEventHour(e.target.value)}} className={`${styles.formSelect} `}>
             {hour.map((option, index) => {
@@ -81,6 +84,14 @@ const handleSubmit = () => {
             {period.map((option, index) => {
               return <option key={index}>{option}</option>
               })}
+          </select>
+        </div>
+        <label className={styles.formLabel}>Event Budget</label>
+        <div className=' text-center w-full border-2 border-slate-200 rounded-xl px-10'>
+          <select onChange={(e) => {setEventBudget(e.target.value)}} className={`${styles.formSelect}`}>
+            {budgetOptions.map((option, index) => {
+              return <option key={index}>{option}</option>
+            })}
           </select>
         </div>
         <label className={styles.formLabel}>Additional Notes</label>
