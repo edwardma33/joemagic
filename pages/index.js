@@ -25,13 +25,13 @@ export default function Home() {
   return (
     <main className={`bg-slate-200 transition-colors duration-300 dark:bg-slate-600`} >
       <Navbar/>
-        <div className={`mx-5 pt-10 shadow-2xl rounded-xl bg-white dark:bg-slate-600`}>
+        <div className={` mx-5 pt-10 pb-8 shadow-2xl rounded-xl bg-white dark:bg-slate-600`}>
           <Hero mainStyle={mainStyle} />
           <TextSpacer mainStyle={mainStyle} blurbIndex={0} sectionHeader={'About The Show'} sectionHeaderStyle={sectionHeaderStyle} />
           <Reviews mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(1000)}/>
           <EventForm mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />
           <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'What To Expect'} sectionHeaderStyle={sectionHeaderStyle} />
-          <Gallery mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />
+          <Gallery mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(800)}/>
           <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'Contacts'} sectionHeaderStyle={sectionHeaderStyle} isContacts={true} />
         </div>
       <Footer/>

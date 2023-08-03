@@ -8,15 +8,13 @@ import {
   MdDoneOutline, 
   MdOutlineFormatQuote,
   MdOutlineCall,
-  MdOutlineDarkMode,
-  MdOutlineLightMode
 } from 'react-icons/md'
 
 import useWindow from '@/hooks/useWindow'
 
 function Navbar() {
   const styles = {
-    "sidebarItems": `flex gap-2 items-center m-1 p-2 mx-2 hover:bg-slate-300 rounded-lg font-montserrat transition-colors duration-300 dark:text-slate-200`
+    "sidebarItems": `flex gap-2 items-center m-1 p-2 mx-2 hover:bg-slate-300 rounded-lg font-montserrat transition-colors duration-300 dark:text-slate-200 dark:hover:bg-slate-700`
   }
 
   const [showSidebar, setShowSidebar] = useState(false)
@@ -33,26 +31,26 @@ function Navbar() {
       <div className={` fixed flex-col float-left text-left bg-slate-200 h-screen border-slate-300 border-t-[1px] ${showSidebar ? 'flex' : 'translate-x-[-100%]'} transition-transform-colors duration-300 dark:bg-slate-600 dark:border-slate-700`}>
       <div className={styles.sidebarItems}>
         <MdInfoOutline />
-        <a href="#home">About The Show</a>
+        <a onClick={handleSidebar} href="#home">About The Show</a>
       </div>
       <div className={styles.sidebarItems}>
         <MdOutlineFormatQuote />
-        <a href="#reviews">Reviews</a>
+        <a onClick={handleSidebar} href="#reviews">Reviews</a>
       </div>
       <div className={styles.sidebarItems}>
         <MdDoneOutline />
-        <a href="#booking">Booking</a>
+        <a onClick={handleSidebar} href="#booking">Booking</a>
       </div>
       <div className={styles.sidebarItems}>
         <MdStarOutline />
-        <a href="#gallery">Gallery</a>
+        <a onClick={handleSidebar} href="#gallery">Gallery</a>
       </div>
       <div className={styles.sidebarItems}>
         <MdOutlineCall />
-        <a href="#contacts">Contact Me</a>
+        <a onClick={handleSidebar} href="#contacts">Contact Me</a>
       </div>
       <div className=' gap-2 text-center m-1 p-2 mx-2 rounded-lg font-montserratBold text-slate-600 transition-colors duration-300 dark:text-slate-200'>
-        <a href="" className=' text-center '>Joe Magic</a>
+        <a onClick={handleSidebar} href="/" className=' text-center '>Joe Magic</a>
       </div>
     </div>
     </main>
