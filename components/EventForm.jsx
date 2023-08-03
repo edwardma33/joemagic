@@ -88,7 +88,7 @@ const handleSubmit = () => {
         </div>
         <label className={styles.formLabel}>Event Budget</label>
         <div className=' text-center w-full border-2 border-slate-200 rounded-xl px-10'>
-          <select onChange={(e) => {setEventBudget(e.target.value)}} className={`${styles.formSelect}`}>
+          <select onChange={(e) => {setEventBudget(e.target.value)}} className={`${styles.formSelect} text-center`}>
             {budgetOptions.map((option, index) => {
               return <option key={index}>{option}</option>
             })}
