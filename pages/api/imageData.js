@@ -1,4 +1,5 @@
 const imageData = [
+    'long',
     'old',
     'point',
     'rental',
