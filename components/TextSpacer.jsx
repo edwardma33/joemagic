@@ -23,10 +23,13 @@ function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, i
   } else if (isContacts) {
     return (
       <main id='contacts' className={`${mainStyle}`}>
-        <h1 className={`${sectionHeaderStyle}`}>{sectionHeader}</h1>
-        <a href={`mailto:${textBlurbs['contacts'].email}`} className={`${styles.contactStyles}`}><MdOutlineEmail />{textBlurbs['contacts'].email}</a>
-        <a href={`tel:${textBlurbs['contacts'].phone}`} className={`${styles.contactStyles}`}><MdOutlinePhone />{textBlurbs['contacts'].phone}</a>
-        <div className={`${styles.contactStyles} `}><MdOutlineMarkunreadMailbox/><p>{textBlurbs['contacts'].poBox}</p></div>
+        <div className=' w-fit mx-auto'>
+          <h1 className={`${sectionHeaderStyle}`}>{sectionHeader}</h1>
+          <a href={`mailto:${textBlurbs['contacts'].email}`} className={`${styles.contactStyles}`}><MdOutlineEmail />{textBlurbs['contacts'].email}</a>
+          <a href={`tel:${textBlurbs['contacts'].phone}`} className={`${styles.contactStyles}`}><MdOutlinePhone />{textBlurbs['contacts'].phone}</a>
+          <div className={`${styles.contactStyles} `}><MdOutlineMarkunreadMailbox/><p>{textBlurbs['contacts'].poBox}</p></div>
+        </div>
+
       </main>
     )
   } else {
