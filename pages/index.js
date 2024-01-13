@@ -7,6 +7,7 @@ import Reviews from '@/components/Reviews'
 import Gallery from '@/components/Gallery'
 
 import useWindow from '@/hooks/useWindow'
+import Groups from '@/components/Groups'
 
 const isSmall = (pixels) => {
   let output = true
@@ -33,6 +34,7 @@ export default function Home() {
           <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'What To Expect'} sectionHeaderStyle={sectionHeaderStyle} />
           <Gallery mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(800)}/>
           <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'For Availability'} sectionHeaderStyle={sectionHeaderStyle} isContacts={true} />
+          <Groups mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />
         </div>
       <Footer/>
     </main>

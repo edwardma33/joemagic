@@ -29,8 +29,20 @@ const textBlurbs = {
     "email": "joelyonsmagic@gmail.com",
     "phone": "614-777-7632",
     "poBox": "P.O. Box 259 Ashley, Ohio 43003"
-  }
+  },
+  "groups": [
+    "Solut! Corporation",
+    "New Albany Country Club",
+    "VFW Post 10523",
+    "Columbus Torah Academy",
+    "Franklin County Fair",
+    "Johnsville Elementary",
+    "Columbus Country Club",
+    "Grand Rapids Applebutter Fest",
+    "Lima Parks & Recreation",
+    "Bang USA Corporation",
+    "Newark Masonic Lodge"
+  ]
 }
-
 
 export default textBlurbs
