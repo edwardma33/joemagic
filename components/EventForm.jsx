@@ -4,7 +4,7 @@ import { React, useState, useEffect } from 'react'
 const styles = {
   'formLabel': 'font-montserratBold bg-blue-300 w-fit rounded-lg text-blue-900 p-1',
   'formInput': 'p-2 border-2 rounded-xl border-slate-200 font-montserrat placeholder:font-montserrat',
-  'formSelect': 'p-2 rounded-xl border-none hover:bg-slate-100 text-center font-montserra dark:hover:bg-slate-700 outline-none',
+  'formSelect': 'p-2 rounded-xl border-none hover:bg-slate-100 text-center font-montserrat dark:hover:bg-slate-700 outline-none',
   'formSubmit': ' text-xl font-montserratBold bg-blue-300 w-fit rounded-lg text-blue-900 p-1 mx-auto'
 }
 
@@ -87,15 +87,15 @@ const handleSubmit = () => {
           </select>
         </div>
         <label className={styles.formLabel}>Event Budget</label>
-        <div className=' text-center w-full border-2 border-slate-200 rounded-xl px-10'>
-          <select onChange={(e) => {setEventBudget(e.target.value)}} className={`${styles.formSelect} text-center`}>
+        <div className=' text-center w-full border-2 border-slate-200 rounded-xl '>
+          <select onChange={(e) => {setEventBudget(e.target.value)}} className={`${styles.formSelect} w-full`}>
             {budgetOptions.map((option, index) => {
               return <option key={index}>{option}</option>
             })}
           </select>
         </div>
         <label className={styles.formLabel}>Additional Notes</label>
-        <input type="text" placeholder='addition notes' onChange={(e) => {setEventNotes(e.target.value)}} className={`${styles.formInput}`} />
+        <input type="text" placeholder='additional notes' onChange={(e) => {setEventNotes(e.target.value)}} className={`${styles.formInput}`} />
         <button type='submit' className={styles.formSubmit}>Submit</button>
       </form>
     </main>
