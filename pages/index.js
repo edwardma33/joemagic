@@ -7,6 +7,7 @@ import Reviews from '@/components/Reviews'
 import Gallery from '@/components/Gallery'
 
 import useWindow from '@/hooks/useWindow'
+import Groups from '@/components/Groups'
 
 const isSmall = (pixels) => {
   let output = true
@@ -23,16 +24,17 @@ export default function Home() {
   const sectionHeaderStyle = 'font-montserratBold text-2xl text-center bg-green-300 w-fit mx-auto rounded-lg text-green-900 p-1 mb-4'
 
   return (
-    <main className={`bg-slate-200 transition-colors duration-300 dark:bg-slate-600`} >
+    <main>
       <Navbar/>
-        <div className={` mx-5 pt-10 pb-8 shadow-2xl rounded-xl bg-white dark:bg-slate-600`}>
+        <div className={` pt-10 pb-8 shadow-2xl bg-white dark:bg-slate-600`}>
           <Hero mainStyle={mainStyle} />
           <TextSpacer mainStyle={mainStyle} blurbIndex={0} sectionHeader={'About The Show'} sectionHeaderStyle={sectionHeaderStyle} />
           <Reviews mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(1000)}/>
           <EventForm mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />
           <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'What To Expect'} sectionHeaderStyle={sectionHeaderStyle} />
           <Gallery mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(800)}/>
-          <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'Contacts'} sectionHeaderStyle={sectionHeaderStyle} isContacts={true} />
+          <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'For Availability'} sectionHeaderStyle={sectionHeaderStyle} isContacts={true} />
+          <Groups mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />
         </div>
       <Footer/>
     </main>

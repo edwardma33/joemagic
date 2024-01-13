@@ -1,10 +1,10 @@
 const imageData = [
     'long',
     'old',
-    'point',
+    'new',
     'rental',
     'rope',
-    'town-hall',
+    'funco',
 ]
 
 export default imageData
