@@ -3,18 +3,22 @@ const textBlurbs = {
     {
       "quote": "I would recommend the show to anyone... What a hoot!",
       "person": "Leslie Haignere",
+      "location": "Columbus, OH",
     },
     {
       "quote": "Lots of giggles from the kids and even the adults... illusions were great... Call Joe Lyons, his show will not disappoint.",
       "person": "Erika Alexa",
+      "location": "Delaware, OH",
     },
     {
       "quote": "We certainly enjoyed your show... Wholesome family entertainment for the young and not so young...",
       "person": "Rachael E. Lewis",
+      "location": "Lima Parks & Rec, Lima, OH",
     },
     {
-      "quote": "...awesome show last night... very good at your craft... I'm still amazed!",
-      "person": "Dan Yokum",
+      "quote": "You were a hit, see you next year!",
+      "person": "Fred Crumb",
+      "location": "Solut!, Lewis Center, OH",
     },
   ],
 
@@ -40,7 +44,7 @@ const textBlurbs = {
     "Columbus Country Club",
     "Grand Rapids Applebutter Fest",
     "Lima Parks & Recreation",
-    "Bang USA Corporation",
+    "Bung USA Corporation",
     "Newark Masonic Lodge"
   ]
 }
