@@ -17,7 +17,7 @@ function TextSpacer({blurbIndex, mainStyle, sectionHeaderStyle, sectionHeader, i
     return (
       <main className={`${mainStyle}`}>
         <h1 className={`${sectionHeaderStyle}`}>{sectionHeader}</h1>
-        <p className=' font-montserrat'>{textBlurbs['blurbs'][blurbIndex]}</p>
+        <p className=' text-center font-montserrat'>{textBlurbs['blurbs'][blurbIndex]}</p>
       </main>
     )
   } else if (isContacts) {
