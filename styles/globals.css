@@ -17,6 +17,11 @@
   src: url('../public/Montserrat-Bold.ttf');
 }
 
+@font-face {
+  font-family: grandCru;
+  src: url('../public/GrandCru.otf')
+}
+
 #navbar {
   -webkit-user-select:none;
   -khtml-user-select:none;
@@ -37,4 +42,12 @@ select, input {
   padding: inherit;
   appearance: auto;
   -webkit-appearance: none;
+}
+
+.text-outline {
+  text-shadow: 
+    1px 1px 0 #fff, 
+    -1px -1px 0 #fff, 
+    1px -1px 0 #fff, 
+    -1px 1px 0 #fff; /* Adjust color and thickness as needed */
 }

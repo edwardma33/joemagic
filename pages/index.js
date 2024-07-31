@@ -31,7 +31,7 @@ export default function Home() {
           <TextSpacer mainStyle={mainStyle} blurbIndex={0} sectionHeader={'About The Show'} sectionHeaderStyle={sectionHeaderStyle} />
           <Reviews mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(1000)}/>
           <EventForm mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />
-          <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'What To Expect'} sectionHeaderStyle={sectionHeaderStyle} />
+          <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'Magical Programming that\'s PERFECT for your special event!'} sectionHeaderStyle={sectionHeaderStyle} />
           <Gallery mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} isSmall={isSmall(800)}/>
           <TextSpacer mainStyle={mainStyle} blurbIndex={2} sectionHeader={'For Availability'} sectionHeaderStyle={sectionHeaderStyle} isContacts={true} />
           <Groups mainStyle={mainStyle} sectionHeaderStyle={sectionHeaderStyle} />

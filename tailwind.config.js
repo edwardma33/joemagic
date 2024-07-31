@@ -11,8 +11,9 @@ module.exports = {
         montserrat: 'montserrat',
         montserratThin: 'montserrat-thin',
         montserratBold: 'montserrat-bold',
+        grandCru: 'grand-cru'
       },
-    },
+    }
   },
   plugins: [],
 }

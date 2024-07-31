@@ -7,7 +7,7 @@ function Groups({mainStyle, sectionHeaderStyle}) {
         <h1 className={`${sectionHeaderStyle}`}>Join These Family Groups</h1>
         <div className='w-fit mx-auto'>
             {textBlurbs.groups.map((group, index) => {
-                return <li className='text-left' key={index}>{group}</li>
+                return <li className='text-left font-montserrat' key={index}>{group}</li>
             })}
         </div>
 
