@@ -23,7 +23,7 @@ const textBlurbs = {
   ],
 
   "blurbs": [
-    "Discover the Magic of Joe Lyons! Entertaining audiences since 1987, his self-contained show offers 20-45 minutes of enchanting magic, laughter, and mesmerizing tales. Join him on a journey through childhood memories on a dairy farm, brought to life with delightful music and captivating tricks.",
+    "Discover the Magic of Joe Lyons! Entertaining audiences since 1987, his self-contained show offers 20-45 minutes of enchanting magic, laughter, and mesmerizing tales. Join him on a journey through childhood memories on a dairy farm, brought to life with delightful music and captivating illusions.",
 
     "Folks of all ages will share in the magic and experience the wonder during this musical mix of fun and illusion!",
 
