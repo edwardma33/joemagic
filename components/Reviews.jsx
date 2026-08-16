@@ -1,26 +1,13 @@
-import React from 'react'
+import { MdFormatQuote } from 'react-icons/md'
 import textBlurbs from '@/pages/api/textBlurbs'
 
-function Reviews({mainStyle, sectionHeaderStyle, isSmall}) {
-
-  return (
-    <main id='reviews' className={`${mainStyle}`}>
-      <h1 className={`${sectionHeaderStyle}`}>Reviews</h1>
-      <div className={` w-full h-fit overflow-x-auto flex gap-8 ${isSmall ? 'flex-col' : ''}`}>
-        {textBlurbs['quotes'].map((quote, index) => {
-        return <div key={index} className={`flex flex-col justify-between border-2 rounded-xl p-2 border-slate-200 ${isSmall ? '' : 'w-1/4'}`}>
-          <p className=' font-montserrat'>{`"${quote.quote}"`}</p>
-          <div>
-            <p className=' font-montserratThin text-left'>-{quote.person}</p>
-            <p className=' font-montserratThin text-left'>{quote.location}</p>
-          </div>
-
-        </div>
-        })}
-      </div>
-      
-    </main>
-  )
+export default function Reviews() {
+  return <section id='reviews' className='bg-slate-50'>
+    <div className='mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20'>
+      <div className='max-w-xl'><p className='eyebrow text-[#39715a]'>Kind words</p><h2 className='mt-3 font-grandCru text-5xl leading-none text-[#283b46]'>The applause says it best.</h2></div>
+      <div className='mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4'>{textBlurbs.quotes.map((quote) => <figure key={quote.person} className='flex min-h-[225px] flex-col justify-between rounded-lg border border-slate-200 bg-white p-6'>
+        <MdFormatQuote className='text-3xl text-[#73a487]' /><blockquote className='mt-5 text-base leading-7 text-slate-600'>{quote.quote}</blockquote><figcaption className='mt-7 text-xs leading-5 text-slate-400'><strong className='block font-bold uppercase tracking-[.12em] text-[#39715a]'>{quote.person}</strong>{quote.location}</figcaption>
+      </figure>)}</div>
+    </div>
+  </section>
 }
-
-export default Reviews
