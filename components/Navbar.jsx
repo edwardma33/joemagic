@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { MdClose, MdMenu } from 'react-icons/md'
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 
 const links = [
   ['The Show', '/#about'],
@@ -24,7 +24,7 @@ export default function Navbar() {
         </Link>
         <div className='hidden items-center gap-6 md:flex'>
           {links.map(([label, href]) => <Link key={href} href={href} className='text-sm font-medium text-slate-600 transition hover:text-[#39715a]'>{label}</Link>)}
-          <Button className='h-10 px-5 text-xs uppercase tracking-[.13em]' onClick={() => { window.location.href = '/#booking' }}>Book a show</Button>
+          <Link href='/#booking' className={buttonVariants({ className: 'h-10 px-5 text-xs uppercase tracking-[.13em]' })}>Book a show</Link>
         </div>
         <button className='grid h-9 w-9 place-items-center rounded-md text-slate-700 md:hidden' aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <MdClose size={22} /> : <MdMenu size={22} />}

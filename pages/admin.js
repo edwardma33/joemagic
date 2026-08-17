@@ -6,7 +6,16 @@ const empty = { name: '', description: '', price: '', shipping: '5.00', sortOrde
 export default function Admin() {
   const [auth, setAuth] = useState(null), [password, setPassword] = useState(''), [form, setForm] = useState(empty), [products, setProducts] = useState([]), [message, setMessage] = useState(''), [busy, setBusy] = useState(false)
   const load = async () => { const session = await fetch('/api/admin/session').then(r => r.json()); setAuth(session.authenticated); if (session.authenticated) { const result = await fetch('/api/admin/products').then(r => r.json()); setProducts(result.products || []) } }
-  useEffect(() => { load() }, [])
+  useEffect(() => {
+    void fetch('/api/admin/session')
+      .then(response => response.json())
+      .then(session => {
+        setAuth(session.authenticated)
+        if (!session.authenticated) return null
+        return fetch('/api/admin/products').then(response => response.json())
+      })
+      .then(result => { if (result) setProducts(result.products || []) })
+  }, [])
   const login = async (event) => { event.preventDefault(); setMessage(''); const response = await fetch('/api/admin/session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password }) }); if (!response.ok) return setMessage('Incorrect password.'); setAuth(true); setPassword(''); load() }
   const save = async (event) => { event.preventDefault(); if (!form.image) return setMessage('Choose a product image.'); setBusy(true); setMessage('Saving your product…'); const reader = new FileReader(); reader.onload = async () => { const response = await fetch('/api/admin/products', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...form, imageData: reader.result }) }); const result = await response.json(); setBusy(false); if (!response.ok) return setMessage(result.error); setForm(empty); setMessage('Product saved. Checkout can be enabled later.'); setProducts([result.product, ...products]) }; reader.readAsDataURL(form.image) }
   if (auth === null) return <main className='grid min-h-screen place-items-center bg-slate-50 p-5'><p className='text-slate-500'>Loading…</p></main>
