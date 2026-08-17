@@ -8,5 +8,5 @@ import Groups from '@/components/Groups'
 import Footer from '@/components/Footer'
 
 export default function Home() {
-  return <main className='overflow-hidden bg-white'><Navbar /><Hero /><About /><Reviews /><EventForm /><Gallery /><Contact /><Groups /><Footer /></main>
+  return <main className='overflow-hidden bg-[#191918]'><Navbar /><Hero /><About /><Reviews /><EventForm /><Gallery /><Contact /><Groups /><Footer /></main>
 }
