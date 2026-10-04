@@ -1,53 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../tailwind.config.js";
+@import "tailwindcss";
 
-@font-face {
-  font-family: montserrat;
-  src: url('../public/Montserrat-Medium.ttf');
-}
+@font-face { font-family: Montserrat; src: url('/Montserrat-Medium.ttf'); font-display: swap; }
+@font-face { font-family: Montserrat; src: url('/Montserrat-Bold.ttf'); font-weight: 700; font-display: swap; }
+@font-face { font-family: GrandCru; src: url('/GrandCru.otf'); font-display: swap; }
 
-@font-face {
-  font-family: montserrat-thin;
-  src: url('../public/Montserrat-Light.ttf')
-}
-
-@font-face {
-  font-family: montserrat-bold;
-  src: url('../public/Montserrat-Bold.ttf');
-}
-
-@font-face {
-  font-family: grandCru;
-  src: url('../public/GrandCru.otf')
-}
-
-#navbar {
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-}
-
-input {
-  outline: none;
-}
-
-select, input {
-  font-family: inherit;
-  color: inherit;
-  background-color: inherit;
-  border: inherit;
-  padding: inherit;
-  appearance: auto;
-  -webkit-appearance: none;
-}
-
-.text-outline {
-  text-shadow: 
-    1px 1px 0 #fff, 
-    -1px -1px 0 #fff, 
-    1px -1px 0 #fff, 
-    -1px 1px 0 #fff; /* Adjust color and thickness as needed */
-}
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { margin: 0; background: #191918; color: #d6d0c7; font-family: Montserrat, sans-serif; }
+* { box-sizing: border-box; }
+::selection { background: #a63832; color: #fff8ed; }
+.eyebrow { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.contact-link { display: flex; min-width: 0; align-items: center; gap: .55rem; border-bottom: 1px solid rgba(255,255,255,.28); padding-bottom: .7rem; }
+a.contact-link:hover { text-decoration: underline; }
+.gallery-grid { columns: 1; column-gap: 1rem; }
+.gallery-item { break-inside: avoid; margin: 0 0 1rem; overflow: hidden; border: 1px solid #4a403d; border-radius: .5rem; background: #2a2726; padding: .3rem; box-shadow: 0 8px 22px rgba(0, 0, 0, .2); }
+@media (min-width: 640px) { .gallery-grid { columns: 2; } }
+@media (min-width: 1024px) { .gallery-grid { columns: 3; } }

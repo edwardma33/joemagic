@@ -1,11 +1,3 @@
-import React from 'react'
-
-function Footer () {
-  return (
-    <main className={` w-full bg-slate-200 transition-colors duration-300 dark:bg-slate-600 dark:text-slate-200`}>
-        <h4 className=' w-fit mx-auto p-4 text-sm font-montserratThin'>{`Copyright © 2012-${new Date().getFullYear()} Joe Lyons' Magic Enterprises`}</h4>
-    </main>
-  )
+export default function Footer() {
+  return <footer className='border-t border-[#443b39] bg-[#171716] px-5 py-7 text-center text-xs text-stone-500'>Copyright © 2012–{new Date().getFullYear()} Joe Lyons&apos; Magic Enterprises</footer>
 }
-
-export default Footer
